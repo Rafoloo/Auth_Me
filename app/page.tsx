@@ -2,6 +2,7 @@ import { Poppins } from "next/font/google";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { LoginButton } from "@/components/auth/login/login-button";
 
 const font = Poppins ({
   subsets: ["latin"],
@@ -24,9 +25,13 @@ export default function Home() {
         <p className="text-white text-lg">
           Centro Interdisciplinar em Diabetes Unimar
         </p>
-        <Button variant={"secondary"} size="lg">
-          Entrar
-        </Button>
+        <div>
+          <LoginButton>
+            <Button variant={"secondary"} size="lg">
+              Entrar
+            </Button>
+          </LoginButton>
+        </div>
       </div>
     </main>
   );
